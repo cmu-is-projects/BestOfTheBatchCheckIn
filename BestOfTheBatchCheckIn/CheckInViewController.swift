@@ -10,18 +10,48 @@ import UIKit
 import AVFoundation
 
 class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    @IBOutlet weak var checkInButton: UIButton!
 
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var lblDataType: UILabel!
     @IBOutlet weak var lblDataInfo: UILabel!
+    @IBAction func checkIn(sender: AnyObject) {
+    }
+    @IBAction func enterTicketNum(sender: AnyObject) {
+        let alert = UIAlertController(title: "Enter Ticket Number", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Enter", style: UIAlertActionStyle.Default, handler: { (action: UIAlertAction!) in
+            print(alert.textFields![0].text!)
+            self.lblDataInfo.text = alert.textFields![0].text!
+            self.checkInButton.enabled = true
+        }))
+        alert.addTextFieldWithConfigurationHandler{(textField) in
+            textField.placeholder = "Ticket Number"
+            textField.keyboardType = .NumberPad
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
     //MARK: Properties
     let captureSession = AVCaptureSession()
     var captureDevice:AVCaptureDevice?
     var captureLayer:AVCaptureVideoPreviewLayer?
     
+    let barcodeTypes = [AVMetadataObjectTypeUPCECode,
+        AVMetadataObjectTypeCode39Code,
+        AVMetadataObjectTypeCode39Mod43Code,
+        AVMetadataObjectTypeEAN13Code,
+        AVMetadataObjectTypeEAN8Code,
+        AVMetadataObjectTypeCode93Code,
+        AVMetadataObjectTypeCode128Code,
+        AVMetadataObjectTypePDF417Code,
+        AVMetadataObjectTypeQRCode,
+        AVMetadataObjectTypeAztecCode
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupCaptureSession()
 
         // Do any additional setup after loading the view.
     }
@@ -29,7 +59,8 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override func viewDidAppear(animated: Bool)
     {
         super.viewDidAppear(animated)
-        self.setupCaptureSession()
+        self.checkInButton.enabled = false
+//        self.setupCaptureSession()
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,9 +120,12 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     {
         for metaData in metadataObjects
         {
-            let decodedData:AVMetadataMachineReadableCodeObject = metaData as! AVMetadataMachineReadableCodeObject
-            self.lblDataInfo.text = decodedData.stringValue
-            self.lblDataType.text = decodedData.type
+            if ((barcodeTypes.contains(metaData.type)) && metaData.isKindOfClass(AVMetadataMachineReadableCodeObject)){
+                let decodedData:AVMetadataMachineReadableCodeObject = metaData as! AVMetadataMachineReadableCodeObject
+                self.lblDataInfo.text = decodedData.stringValue
+                self.lblDataType.text = decodedData.type
+                self.checkInButton.enabled = true
+            }
         }
     }
     
@@ -104,6 +138,14 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         })
         alertController.addAction(dismiss)
         self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    //Prepare for segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "barcodeScanned" {
+            let showWebpage:WebViewController = segue.destinationViewController as! WebViewController
+            showWebpage.barcodeNum = self.lblDataInfo.text!
+        }
     }
 
 }

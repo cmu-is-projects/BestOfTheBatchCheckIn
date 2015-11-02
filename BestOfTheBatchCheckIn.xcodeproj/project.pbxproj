@@ -15,6 +15,7 @@
 		9D2C8F491BDD889A00386805 /* BestOfTheBatchCheckInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2C8F481BDD889A00386805 /* BestOfTheBatchCheckInTests.swift */; };
 		9D2C8F541BDD889A00386805 /* BestOfTheBatchCheckInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2C8F531BDD889A00386805 /* BestOfTheBatchCheckInUITests.swift */; };
 		9D7B88001BE1A45E0076453F /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B87FF1BE1A45E0076453F /* CheckInViewController.swift */; };
+		E5B3E8541BE7074500F60405 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B3E8531BE7074500F60405 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9D2C8F531BDD889A00386805 /* BestOfTheBatchCheckInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestOfTheBatchCheckInUITests.swift; sourceTree = "<group>"; };
 		9D2C8F551BDD889A00386805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D7B87FF1BE1A45E0076453F /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		E5B3E8531BE7074500F60405 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9D2C8F3C1BDD889A00386805 /* LaunchScreen.storyboard */,
 				9D2C8F3F1BDD889A00386805 /* Info.plist */,
 				9D7B87FF1BE1A45E0076453F /* CheckInViewController.swift */,
+				E5B3E8531BE7074500F60405 /* WebViewController.swift */,
 			);
 			path = BestOfTheBatchCheckIn;
 			sourceTree = "<group>";
@@ -195,7 +198,7 @@
 				TargetAttributes = {
 					9D2C8F2F1BDD889A00386805 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = C995Y26NJ2;
+						DevelopmentTeam = 42WHG5CT73;
 					};
 					9D2C8F431BDD889A00386805 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -264,6 +267,7 @@
 				9D2C8F361BDD889A00386805 /* ViewController.swift in Sources */,
 				9D7B88001BE1A45E0076453F /* CheckInViewController.swift in Sources */,
 				9D2C8F341BDD889A00386805 /* AppDelegate.swift in Sources */,
+				E5B3E8541BE7074500F60405 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +409,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BestOfTheBatchCheckIn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cmuis.BestOfTheBatchCheckIn;
+				PRODUCT_BUNDLE_IDENTIFIER = cmuis.BestOfTheBatchCheckInapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -416,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BestOfTheBatchCheckIn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cmuis.BestOfTheBatchCheckIn;
+				PRODUCT_BUNDLE_IDENTIFIER = cmuis.BestOfTheBatchCheckInapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
