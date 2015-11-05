@@ -25,6 +25,9 @@ class ViewController: UIViewController {
         if segue.identifier == "registerSegue" {
             let showWebpage:WebViewController = segue.destinationViewController as! WebViewController
             showWebpage.barcodeNum = "needToRegister"
+        }else if segue.identifier == "authenticateSegue" {
+            let showWebpage:WebViewController = segue.destinationViewController as! WebViewController
+            showWebpage.barcodeNum = "needToAuthenticate"
         }
     }
 

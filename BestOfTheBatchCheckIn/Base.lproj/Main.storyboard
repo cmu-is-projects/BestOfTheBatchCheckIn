@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XMe-oF-nbY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XMe-oF-nbY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -18,83 +18,106 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHy-en-DXI">
-                                <rect key="frame" x="354" y="385" width="60" height="30"/>
+                                <rect key="frame" x="319" y="384" width="131" height="60"/>
                                 <animations/>
-                                <state key="normal" title="Check In"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Check In">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="uOh-Ta-gIF" kind="show" id="lm0-sa-YTq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hab-gl-Fon">
-                                <rect key="frame" x="356" y="634" width="57" height="30"/>
+                                <rect key="frame" x="319" y="634" width="131" height="59"/>
                                 <animations/>
-                                <state key="normal" title="Register"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="IwM-L0-OxW" kind="show" identifier="registerSegue" id="ETD-Wz-uWT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="In the Pocket Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKB-hM-wov">
                                 <rect key="frame" x="207" y="89" width="355" height="32"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7J-zO-2S4">
                                 <rect key="frame" x="122" y="270" width="524" height="130"/>
+                                <animations/>
                                 <string key="text">For participants who have already pre-registered on the website, hit the check-in button and follow the instructions on the next page.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCl-FS-35H">
                                 <rect key="frame" x="122" y="504" width="524" height="133"/>
+                                <animations/>
                                 <string key="text">For participants who have not pre-registered on the website, hit the register button and allow them to register on the website using their ticket number and code.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PRE-REGISTERED PARTICIPANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awW-k4-F7o">
                                 <rect key="frame" x="212" y="270" width="345" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NON PRE-REGISTERED PARTICIPANTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgY-FM-D1T">
                                 <rect key="frame" x="186" y="504" width="396" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="If you are ever asked to login to the website, please see a Carnegie Mellon University volunteer!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBl-S0-6Ks">
+                                <rect key="frame" x="122" y="814" width="524" height="129"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejA-so-qDu">
-                                <rect key="frame" x="340" y="936" width="88" height="30"/>
-                                <state key="normal" title="Authenticate"/>
+                                <rect key="frame" x="321" y="936" width="126" height="46"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Authenticate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IwM-L0-OxW" kind="push" identifier="authenticateSegue" id="sQk-Gg-NKp"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="If you are ever asked to login to the website, please see a Carnegie Mellon University volunteer!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBl-S0-6Ks">
-                                <rect key="frame" x="122" y="814" width="524" height="129"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hab-gl-Fon" secondAttribute="trailing" constant="298" id="3vS-8m-Q48"/>
                             <constraint firstItem="B7J-zO-2S4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="102" id="43C-ZT-01x"/>
+                            <constraint firstItem="hab-gl-Fon" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="299" id="FgW-L0-2Sq"/>
                             <constraint firstItem="vBl-S0-6Ks" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="102" id="HFe-zt-Rz1"/>
                             <constraint firstItem="vCl-FS-35H" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="HI0-62-Opa"/>
+                            <constraint firstItem="hab-gl-Fon" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QzG-0F-bE8"/>
+                            <constraint firstItem="dHy-en-DXI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="299" id="WQY-Uf-Nwo"/>
                             <constraint firstItem="vCl-FS-35H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="102" id="XEN-Hc-2nY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="B7J-zO-2S4" secondAttribute="trailing" constant="102" id="XWH-we-LgR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vCl-FS-35H" secondAttribute="trailing" constant="102" id="YWN-gY-Mmw"/>
-                            <constraint firstItem="hab-gl-Fon" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="dnt-GI-Rje"/>
                             <constraint firstItem="NKB-hM-wov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f01-QY-iL4"/>
                             <constraint firstItem="vBl-S0-6Ks" firstAttribute="width" secondItem="B7J-zO-2S4" secondAttribute="width" id="f7l-KC-Wrh"/>
                             <constraint firstItem="vCl-FS-35H" firstAttribute="width" secondItem="B7J-zO-2S4" secondAttribute="width" id="fIe-ef-qBN"/>
+                            <constraint firstItem="dHy-en-DXI" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="fso-G0-2sy"/>
                             <constraint firstItem="vBl-S0-6Ks" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="gf4-zR-qIh"/>
-                            <constraint firstItem="dHy-en-DXI" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="kPx-gC-uuM"/>
                             <constraint firstItem="B7J-zO-2S4" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="me6-f2-Ld5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vBl-S0-6Ks" secondAttribute="trailing" constant="102" id="mlN-ux-Nx0"/>
                             <constraint firstItem="awW-k4-F7o" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="oKc-hs-ewX"/>
                             <constraint firstItem="DgY-FM-D1T" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="psl-rT-oIw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dHy-en-DXI" secondAttribute="trailing" constant="298" id="qvX-AH-aza"/>
                             <constraint firstItem="ejA-so-qDu" firstAttribute="centerX" secondItem="NKB-hM-wov" secondAttribute="centerX" id="uWd-TI-2nP"/>
                         </constraints>
                     </view>
@@ -107,6 +130,7 @@
         <!--Web View Controller-->
         <scene sceneID="rgj-py-LGa">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAt-SF-xQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="IwM-L0-OxW" customClass="WebViewController" customModule="BestOfTheBatchCheckIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dKf-kv-RWB"/>
@@ -115,15 +139,30 @@
                     <view key="view" contentMode="scaleToFill" id="7sv-sr-fE9">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Dp-ft-HZP">
+                                <rect key="frame" x="92" y="92" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Dp-ft-HZP" secondAttribute="trailing" id="4vM-N3-r2B"/>
+                            <constraint firstItem="U2z-4a-hIe" firstAttribute="top" secondItem="7Dp-ft-HZP" secondAttribute="bottom" id="hyZ-41-Zry"/>
+                            <constraint firstItem="7Dp-ft-HZP" firstAttribute="leading" secondItem="7sv-sr-fE9" secondAttribute="leadingMargin" id="jrx-qr-bWk"/>
+                            <constraint firstItem="7Dp-ft-HZP" firstAttribute="top" secondItem="dKf-kv-RWB" secondAttribute="bottom" id="kXp-OC-2ql"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WdZ-fH-k2e"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="webView" destination="7Dp-ft-HZP" id="205-Fr-4tW"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nAt-SF-xQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789" y="1632"/>
+            <point key="canvasLocation" x="1547" y="1564"/>
         </scene>
         <!--Check In View Controller-->
         <scene sceneID="JkF-lZ-frC">
@@ -138,58 +177,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Check In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7Z-Vk-rrj">
-                                <rect key="frame" x="294" y="93" width="181" height="50"/>
+                                <rect key="frame" x="294" y="81" width="181" height="50"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="44"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Iv-xf-Wgi">
-                                <rect key="frame" x="214" y="222" width="341" height="128"/>
+                                <rect key="frame" x="237" y="157" width="294" height="221"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Data Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7q5-fL-oxN">
-                                <rect key="frame" x="214" y="367" width="341" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Barcode Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nds-Zu-xKH">
-                                <rect key="frame" x="214" y="396" width="341" height="21"/>
+                                <rect key="frame" x="214" y="454" width="341" height="42"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzf-e8-N0h">
-                                <rect key="frame" x="131" y="471" width="506" height="104"/>
+                                <rect key="frame" x="131" y="528" width="506" height="104"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Please use the camera to scan the barcode on the back of the ticket. This will pull up the participant's page. Verify the participant's personal information and game preference (if applicable) with the participant and check them in by clicking 'Check In'. If any edits are required, you may make them on the website by clicking 'Edit'.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF3-rI-HyJ">
-                                <rect key="frame" x="131" y="711" width="506" height="104"/>
+                                <rect key="frame" x="131" y="751" width="506" height="104"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">If the barcode is not scanning for any reason, please use the button below to enter the ticket number that is found on the front of the ticket. This will pull up the participants information and you may proceed as usual.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-H1-pe9">
-                                <rect key="frame" x="355" y="606" width="60" height="30"/>
-                                <state key="normal" title="Check In"/>
-                                <connections>
-                                    <action selector="checkIn:" destination="uOh-Ta-gIF" eventType="touchUpInside" id="tWZ-P8-amt"/>
-                                    <segue destination="IwM-L0-OxW" kind="push" identifier="barcodeScanned" id="v1C-bJ-EQU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgU-Lz-4lz">
-                                <rect key="frame" x="313" y="870" width="142" height="30"/>
+                                <rect key="frame" x="269" y="870" width="231" height="49"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Enter Ticket Number"/>
                                 <connections>
                                     <action selector="enterTicketNum:" destination="uOh-Ta-gIF" eventType="touchUpInside" id="H6q-RB-OH3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Camera is in top left corner)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZP-sL-Gbi">
+                                <rect key="frame" x="275" y="386" width="219" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-H1-pe9">
+                                <rect key="frame" x="292" y="652" width="184" height="53"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Go To Check In"/>
+                                <connections>
+                                    <action selector="checkIn:" destination="uOh-Ta-gIF" eventType="touchUpInside" id="tWZ-P8-amt"/>
+                                    <segue destination="IwM-L0-OxW" kind="push" identifier="barcodeScanned" id="v1C-bJ-EQU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -202,7 +247,6 @@
                             <constraint firstItem="Nds-Zu-xKH" firstAttribute="centerX" secondItem="m7Z-Vk-rrj" secondAttribute="centerX" id="8fM-Lw-tE5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bzf-e8-N0h" secondAttribute="trailing" constant="111" id="GSY-fI-4Q7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aF3-rI-HyJ" secondAttribute="trailing" constant="111" id="KLz-jF-51x"/>
-                            <constraint firstItem="7q5-fL-oxN" firstAttribute="centerX" secondItem="m7Z-Vk-rrj" secondAttribute="centerX" id="OVm-AK-th0"/>
                             <constraint firstItem="m7Z-Vk-rrj" firstAttribute="centerX" secondItem="cLH-pd-98b" secondAttribute="centerX" id="R6i-wN-Wq2"/>
                             <constraint firstItem="bzf-e8-N0h" firstAttribute="centerX" secondItem="m7Z-Vk-rrj" secondAttribute="centerX" id="WSb-CU-D4b"/>
                             <constraint firstItem="DKM-H1-pe9" firstAttribute="centerX" secondItem="m7Z-Vk-rrj" secondAttribute="centerX" id="bj2-Kf-bfr"/>
@@ -215,7 +259,6 @@
                         <outlet property="cameraView" destination="7Iv-xf-Wgi" id="eg7-bc-dfN"/>
                         <outlet property="checkInButton" destination="DKM-H1-pe9" id="nyQ-iV-U2I"/>
                         <outlet property="lblDataInfo" destination="Nds-Zu-xKH" id="ojW-9l-0WK"/>
-                        <outlet property="lblDataType" destination="7q5-fL-oxN" id="O1Q-yp-CIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7B-Nz-NKk" userLabel="First Responder" sceneMemberID="firstResponder"/>

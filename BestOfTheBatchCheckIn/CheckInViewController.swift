@@ -13,7 +13,6 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     @IBOutlet weak var checkInButton: UIButton!
 
     @IBOutlet weak var cameraView: UIView!
-    @IBOutlet weak var lblDataType: UILabel!
     @IBOutlet weak var lblDataInfo: UILabel!
     @IBAction func checkIn(sender: AnyObject) {
     }
@@ -60,6 +59,7 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     {
         super.viewDidAppear(animated)
         self.checkInButton.enabled = false
+        lblDataInfo.text = "No Barcode Scanned"
 //        self.setupCaptureSession()
     }
 
@@ -123,7 +123,6 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             if ((barcodeTypes.contains(metaData.type)) && metaData.isKindOfClass(AVMetadataMachineReadableCodeObject)){
                 let decodedData:AVMetadataMachineReadableCodeObject = metaData as! AVMetadataMachineReadableCodeObject
                 self.lblDataInfo.text = decodedData.stringValue
-                self.lblDataType.text = decodedData.type
                 self.checkInButton.enabled = true
             }
         }

@@ -11,27 +11,31 @@ import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
     
-    var webView: WKWebView!
+//    var webView: WKWebView!
     var barcodeNum: String = ""
     
-    override func loadView() {
-        super.loadView()
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-    }
+    @IBOutlet weak var webView: UIWebView!
+//    override func loadView() {
+//        super.loadView()
+//        if(webView == nil){
+//            print("in webview")
+//            webView = WKWebView()
+//            webView.navigationDelegate = self
+//            view = webView
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         var url = NSURL(string: "")
         print(barcodeNum)
         if (barcodeNum == "needToRegister"){
-            url = NSURL(string: "https://www.cnn.com")
+            url = NSURL(string: "http://inthepocket.org")
+        }else if (barcodeNum == "needToAuthenticate"){
+            url = NSURL(string: "http://inthepocket.org/login")
         }else {
-            url = NSURL(string: "https://www.cmu.edu")
-//            let url = NSURL(string: "https://inthepocket.org/tickets/show_from_barcode/"+barcodeNum)
+            url = NSURL(string: "http://inthepocket.org/tickets/show_from_barcode/"+barcodeNum)
         }
-        print(url)
         webView.loadRequest(NSURLRequest(URL: url!))
         // Do any additional setup after loading the view.
     }
