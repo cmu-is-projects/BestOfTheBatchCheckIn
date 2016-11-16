@@ -51,8 +51,6 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupCaptureSession()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool)
@@ -83,14 +81,14 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             })
         }catch let error as NSError {
             print(error)
-            //            self.showError(setupError!.localizedDescription)
+            // self.showError(setupError!.localizedDescription)
         }
         
     }
     
     private func setupPreviewLayer(completion:() -> ())
     {
-        //        var captureLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        // var captureLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.captureLayer = AVCaptureVideoPreviewLayer(session: self.captureSession) as? AVCaptureVideoPreviewLayer
         
         if let capLayer = self.captureLayer
@@ -106,7 +104,7 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
     
-    //MARK: Metadata capture
+    //MARK: - Metadata capture
     private func addMetaDataCaptureOutToSession()
     {
         let metadata = AVCaptureMetadataOutput()
@@ -128,7 +126,7 @@ class CheckInViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
     
-    //MARK: Utility Functions
+    //MARK: - Utility Functions
     private func showError(error:String)
     {
         let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .Alert)
